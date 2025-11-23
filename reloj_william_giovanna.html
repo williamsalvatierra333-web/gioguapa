@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Reloj William ❤️ Giovanna</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background: #0d0d0d;
+        color: #ffb6d9;
+        padding: 30px;
+    }
+    h1 {
+        font-size: 34px;
+        color: #ff4f98;
+        margin-bottom: 15px;
+    }
+    .clock {
+        background: #1a1a1a;
+        padding: 20px;
+        margin: 20px auto;
+        width: 300px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(255, 80, 140, 0.4);
+        font-size: 24px;
+        border: 2px solid #ff4f98;
+    }
+    h2 {
+        margin: 10px 0;
+        color: #ff4f98;
+    }
+    .heart {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+    .poema {
+        margin-top: 30px;
+        font-size: 20px;
+        line-height: 1.5;
+        background: #1a1a1a;
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid #ff4f98;
+        box-shadow: 0 0 15px rgba(255, 80, 140, 0.3);
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+</head>
+<body>
+
+<h1>❤️ William & Giovanna ❤️</h1>
+
+<div class="clock">
+    <div class="heart">💗</div>
+    <h2>🇪🇸 España</h2>
+    <div id="horaEspana"></div>
+    <div class="heart">💗</div>
+</div>
+
+<div class="clock">
+    <div class="heart">💞</div>
+    <h2>🇪🇨 Ecuador</h2>
+    <div id="horaEcuador"></div>
+    <div class="heart">💞</div>
+</div>
+
+<div class="poema">
+    <p>
+        ❤️ *“Aunque la distancia escriba kilómetros entre nosotros,*<br>
+        *el tiempo nunca logra alejarnos.*<br><br>
+
+        *España marca su hora, Ecuador marca la mía,*<br>
+        *pero mi corazón siempre marca la tuya.*<br><br>
+
+        *Porque donde estés tú, Giovanna,*<br>
+        *ahí viaja mi amor sin fronteras,*<br>
+        *ahí se detiene mi alma para abrazarte.*<br><br>
+
+        *Y aunque falten manos, besos y miradas,*<br>
+        *nos sobra amor para cruzar el mundo entero.”* ❤️
+    </p>
+</div>
+
+<script>
+function actualizarReloj() {
+
+    let opcionesEC = { timeZone: "America/Guayaquil", hour: "2-digit", minute: "2-digit", second: "2-digit" };
+    document.getElementById("horaEcuador").innerText =
+        new Intl.DateTimeFormat("es-ES", opcionesEC).format(new Date());
+
+    let opcionesES = { timeZone: "Europe/Madrid", hour: "2-digit", minute: "2-digit", second: "2-digit" };
+    document.getElementById("horaEspana").innerText =
+        new Intl.DateTimeFormat("es-ES", opcionesES).format(new Date());
+}
+
+setInterval(actualizarReloj, 1000);
+actualizarReloj();
+</script>
+
+</body>
+</html>
